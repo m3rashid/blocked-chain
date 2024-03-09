@@ -31,7 +31,8 @@ class Blockchain(object):
             'index': len(self.chain) + 1,
             'timestamp': time(),
             'proof': proof,
-            previous_hash: previous_hash or self.hash(self.chain[-1]),
+            'previous_hash': previous_hash or self.hash(self.chain[-1]),
+            'transactions': []
         }
         # Set the current transaction list to empty.
         self.current_transactions = []
